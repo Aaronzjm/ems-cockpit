@@ -28,6 +28,9 @@ v[0-9][0-9]-*.png
 figures/
 public/figures/
 
+# ---------- Blender 建模脚本（模型已生成，脚本仅本地留档，不入库） ----------
+scripts/
+
 # ---------- 本地环境 ----------
 *.local
 .env

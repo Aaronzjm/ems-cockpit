@@ -20,7 +20,6 @@
 | 动画 | GSAP | ^3.15 | 设备拆解补间、镜头飞行 |
 | 构建工具 | Vite | ^8.3 | 开发服务器、生产构建 |
 | 样式 | Sass | ^1.105 | 预处理样式 |
-| 模型生成 | Blender Python | 5.2 | 用 bpy 脚本程序化生成 GLB 模型 |
 
 ### Three.js 高级特性
 
@@ -117,10 +116,6 @@ pnpm preview    # 本地预览构建产物
 │   ├── models/                    # 主场景 GLB 模型
 │   ├── models-v2/                 # 参考图复现模型
 │   └── models-car/                # 汽车车间模型
-├── scripts/                       # Blender 建模脚本（程序化生成 GLB）
-│   ├── gen_*.py                   # 主场景模型生成
-│   ├── v2/                        # 参考图复现模型生成
-│   └── car/                       # 汽车车间模型生成
 ├── index.html
 ├── vite.config.js
 └── package.json
@@ -128,11 +123,7 @@ pnpm preview    # 本地预览构建产物
 
 ## 模型说明
 
-所有 GLB 模型均由 **Blender Python 脚本**（`scripts/` 目录）程序化生成，非手工建模：
-
-- 模型文件体积小（最大约 750KB），加载快
-- 每个零件按命名规则（`part_*`）组织，供拆解动画精确控制
-- 如需重新生成模型：在 Blender 5.2 中打开对应 `gen_*.py` 脚本运行即可
+所有 GLB 模型均已生成完毕并随仓库提供，无需任何额外操作，`pnpm dev` 后即可直接加载渲染。
 
 ## 常见问题
 
